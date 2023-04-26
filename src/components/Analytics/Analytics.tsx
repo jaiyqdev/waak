@@ -11,18 +11,23 @@ import sun from "../../assets/img/sun.svg";
 import moon from "../../assets/img/moon.svg";
 import Traffic from "../Traffic/Traffic";
 import Task from "../Task/Task";
+import { useState } from "react";
+import { setNav } from "../Redux/menuSlice";
+import OpenMenu from "../Menu/OpenMenu";
 
 const Analytics = () => {
   const dispatch = useDispatch();
+  const [state, setstate] = useState(true);
 
-  const theme = useAppSelector((state) => state.theme);
+  const theme = useAppSelector((state) => state.theme.theme);
   console.log("tehe", theme);
   return (
     <div className="analytics">
       <div className="analytics-nav">
+        <OpenMenu />
         <div className="nav-item">
-          <img src={iconS} alt="" />
-          <input type="text" />
+          <img onClick={() => setstate(!state)} src={iconS} alt="" />
+          <input className={state ? "display-none" : ""} type="text" />
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
           <img
@@ -31,10 +36,33 @@ const Analytics = () => {
             alt=""
             onClick={() => dispatch(setTheme())}
           ></img>
-          <img src={require(`../../assets/nav/#.png`)} alt="" />
-          <img src={require("../../assets/nav/#-1.png")} alt="" />
-          <img src={require("../../assets/nav/#-2.png")} alt="" />
-          <img src={require("../../assets/img/person.png")} alt="" />
+          <img
+            onClick={() => dispatch(setNav())}
+            className="analytics-nav-img"
+            src={require("../../assets/img/Logo.png")}
+            alt="logo"
+          />
+
+          <img
+            className="analytics-nav_items"
+            src={require(`../../assets/nav/#.png`)}
+            alt=""
+          />
+          <img
+            className="analytics-nav_items"
+            src={require("../../assets/nav/#-1.png")}
+            alt=""
+          />
+          <img
+            className="analytics-nav_items"
+            src={require("../../assets/nav/#-2.png")}
+            alt=""
+          />
+          <img
+            className="analytics-nav_items"
+            src={require("../../assets/img/person.png")}
+            alt=""
+          />
         </div>
       </div>
       <h1
@@ -56,6 +84,7 @@ const Analytics = () => {
         <TimeLine />
       </div>
       <div
+        className="news-timeLine"
         style={{
           display: "flex",
           gap: "24px",

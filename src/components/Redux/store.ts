@@ -1,9 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeSlice from "./themeSlice";
+import menuSlice from "./menuSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 const store = configureStore({
-  reducer: themeSlice,
+  reducer: {
+    theme: themeSlice,
+    menu: menuSlice,
+  },
 });
 declare global {
   type RootState = ReturnType<typeof store.getState>;
