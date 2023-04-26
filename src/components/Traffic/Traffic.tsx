@@ -1,4 +1,5 @@
 import React from "react";
+import "./traffic.modul.scss";
 
 const items = [
   { img: "facebook.png", number: "8,20k", text: "FaceBook" },
@@ -9,19 +10,7 @@ const items = [
 
 const Traffic = () => {
   return (
-    <div
-      className="traffic-theme"
-      style={{
-        display: "flex",
-        width: "344px",
-        height: "360px",
-        borderRadius: "16px",
-        boxShadow:
-          "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
-        flexDirection: "column",
-        // background: "rgba(255, 255, 255, 1)",
-      }}
-    >
+    <div className="traffic-theme">
       <h2
         style={{
           alignItems: "center",
@@ -47,14 +36,13 @@ const Traffic = () => {
       >
         {items.map((e) => (
           <div
+            className="trffic-inner"
             style={{
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
 
               justifyContent: "center",
-              height: "122px",
-              width: "140px",
 
               borderRadius: "8px",
               boxSizing: "border-box",

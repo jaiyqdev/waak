@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../Task/Task.css";
+import "../Task/Task.scss";
 
 const Task = () => {
   const [check, setCheck] = useState([
@@ -20,7 +20,7 @@ const Task = () => {
     <div
       className="task-theme"
       style={{
-        width: "712px",
+        maxWidth: "712px",
         height: "356px",
         boxShadow:
           "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
@@ -40,16 +40,7 @@ const Task = () => {
 
       {check.map((e, i) => {
         return (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              width: "712px",
-              height: "56px",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
+          <div className="task-inner">
             <div
               style={{
                 display: "flex",

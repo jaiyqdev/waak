@@ -25,23 +25,16 @@ li {
   padding: 0;
 }
 
-/* .App {
-  
-  margin-left: 24px;
-  margin-top: 36px;
-} */
-
 .light {
-  /* background-color: white; */
   color: #919eab;
   transition: 500ms linear;
 }
 
 .black {
   background-color: #161c24;
-  // color: #919eab;
+
   transition: 500ms linear;
-  /* color: white; */
+
   h1,
   h2,
   h3,
@@ -61,9 +54,7 @@ li {
 
 .test {
   white-space: nowrap;
-  // margin-right: auto;
+
   overflow: hidden;
   text-overflow: ellipsis;
-  // max-height: 48px;
-  // max-width: 750px;
 }
