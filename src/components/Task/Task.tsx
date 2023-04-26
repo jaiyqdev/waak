@@ -40,17 +40,7 @@ const Task = () => {
 
       {check.map((e, i) => {
         return (
-          <div
-            className="task-inner"
-            // style={{
-            //   display: "flex",
-            //   flexDirection: "row",
-            //   width: "712px",
-            //   height: "56px",
-            //   alignItems: "center",
-            //   justifyContent: "space-between",
-            // }}
-          >
+          <div className="task-inner">
             <div
               style={{
                 display: "flex",

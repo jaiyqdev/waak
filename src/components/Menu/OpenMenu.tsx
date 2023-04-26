@@ -67,7 +67,6 @@ const OpenMenu = () => {
           <li key={e.name} style={{ display: "flex", gap: "16px" }}>
             <img src={require(`../../assets/management/${e.img}`)} alt="" />
             <p className="menu-display">{e.name}</p>
-            {/* <span></span> */}
           </li>
         ))}
       </ul>

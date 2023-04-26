@@ -20,7 +20,7 @@ const Analytics = () => {
   const [state, setstate] = useState(true);
 
   const theme = useAppSelector((state) => state.theme.theme);
-  console.log("tehe", theme);
+
   return (
     <div className="analytics">
       <div className="analytics-nav">

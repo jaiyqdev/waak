@@ -36,17 +36,7 @@ const items = [
 
 const TimeLine = () => {
   return (
-    <div
-      className="timeLine-theme"
-      // style={{
-      //   minWidth: "310px",
-      //   height: "389px",
-      //   padding: "24px",
-      //   borderRadius: "16px",
-      //   boxShadow:
-      //     "0px 0px 2px rgba(145, 158, 171, 0.2), 0px 12px 24px -4px rgba(145, 158, 171, 0.12)",
-      // }}
-    >
+    <div className="timeLine-theme">
       <h2
         style={{
           marginBottom: "30px",

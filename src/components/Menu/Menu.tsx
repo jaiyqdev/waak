@@ -62,7 +62,6 @@ const Menu = () => {
           <li key={e.name} style={{ display: "flex", gap: "16px" }}>
             <img src={require(`../../assets/management/${e.img}`)} alt="" />
             <p className={state ? "display-none" : "menu-display"}>{e.name}</p>
-            {/* <span></span> */}
           </li>
         ))}
       </ul>

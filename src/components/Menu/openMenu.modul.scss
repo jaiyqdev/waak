@@ -21,7 +21,6 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px 24px 0 24px;
-  //   border-right: 1px dashed rgba(145, 158, 171, 0.24);
   position: fixed;
   left: 0;
   right: 0;
@@ -53,12 +52,10 @@
   display: flex;
   gap: 16px;
   h3 {
-    // width: 74px;
     font-weight: 600;
     font-size: 14px;
     line-height: 22px;
     margin-right: 36px;
-    // margin-left: 16px;
   }
 }
 
@@ -67,7 +64,7 @@
 .menu-app {
   display: flex;
   flex-direction: column;
-  //   gap: 16px;
+
   li {
     padding: 5px 16px;
   }
