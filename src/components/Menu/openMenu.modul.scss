@@ -2,8 +2,8 @@
   max-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding: 36px 24px 0 24px;
+  gap: 10px;
+  padding: 20px 24px 0 24px;
   border-right: 1px dashed rgba(145, 158, 171, 0.24);
   position: fixed;
   left: -100%;
@@ -12,6 +12,21 @@
   top: 0;
   z-index: 10;
   transition: left 1s;
+  background-color: white;
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 700;
+    margin-left: 16px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
 }
 
 .open-menu {
