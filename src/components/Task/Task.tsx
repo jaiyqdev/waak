@@ -3,6 +3,7 @@ import "../Task/Task.scss";
 import { useAppSelector } from "../Redux/store";
 
 const Task = () => {
+  const theme = useAppSelector((state) => state.theme.theme);
   const language = useAppSelector((state) => state.language.language);
   const [check, setCheck] = useState([
     {
@@ -82,7 +83,9 @@ const Task = () => {
                 onChange={() => colorChange(e.id)}
                 style={{
                   marginLeft: "19px",
-                  backgroundColor: "green",
+                  backgroundColor: "red",
+                  accentColor: "green",
+                  colorScheme: theme ? "light" : "dark",
                 }}
               />
 
@@ -106,8 +109,8 @@ const Task = () => {
                     fontSize: "14px",
                     lineHeight: "22px",
                     marginLeft: "11px",
-                    // textDecorationLine: !e.checked ? "none" : "line-through",
-                    // color: !e.checked ? "#212B36" : "#919EAB",
+                    textDecorationLine: !e.checked ? "none" : "line-through",
+                    color: theme ? "#212B36" : "#919EAB",
                   }}
                 >
                   {language ? e.textEng : e.textRus}
