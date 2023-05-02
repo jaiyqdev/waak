@@ -66,6 +66,10 @@
     display: initial;
     margin-left: 10px;
   }
+  .analytics-nav_items-1,
+  .analytics-nav_items-2 {
+    display: initial;
+  }
 }
 
 @media (max-width: 560px) {
@@ -81,5 +85,8 @@
         width: 100px;
       }
     }
+  }
+  .analyticsHeader-items {
+    width: 335px;
   }
 }

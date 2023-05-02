@@ -1,13 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../Task/Task.scss";
+import { useAppSelector } from "../Redux/store";
 
 const Task = () => {
+  const language = useAppSelector((state) => state.language.language);
   const [check, setCheck] = useState([
-    { text: "Create FireStone Logo", id: "1", checked: false },
-    { text: "Add SCSS and JS files if required", id: "2", checked: false },
-    { text: "Stakeholder Meeting", id: "3", checked: false },
-    { text: "Scoping & Estimations", id: "4", checked: false },
-    { text: "Sprint Showcase", id: "5", checked: false },
+    {
+      textEng: "Create FireStone Logo",
+      textRus: "Создать логотип FireStone",
+      id: "1",
+      checked: false,
+    },
+    {
+      textEng: "Add SCSS and JS files if required",
+      textRus: "При необходимости добавьте CSS и JS-файлы",
+      id: "2",
+      checked: false,
+    },
+    {
+      textEng: "Stakeholder Meeting",
+      textRus: "Встреча заинтересованных сторон",
+      id: "3",
+      checked: false,
+    },
+    {
+      textEng: "Scoping & Estimations",
+      textRus: "Определение сферы охвата и оценки",
+      id: "4",
+      checked: false,
+    },
+    {
+      textEng: "Sprint Showcase",
+      textRus: "Демонстрация спринта",
+      id: "5",
+      checked: false,
+    },
   ]);
   const colorChange = (id: string) => {
     const res = check.map((item) =>
@@ -35,7 +62,7 @@ const Task = () => {
           lineHeight: "28px",
         }}
       >
-        Tasks
+        {language ? "Tasks" : "Задачи"}
       </h2>
 
       {check.map((e, i) => {
@@ -83,7 +110,7 @@ const Task = () => {
                     // color: !e.checked ? "#212B36" : "#919EAB",
                   }}
                 >
-                  {e.text}
+                  {language ? e.textEng : e.textRus}
                 </h4>
               </label>
             </div>

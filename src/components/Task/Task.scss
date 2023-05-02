@@ -31,10 +31,20 @@
 
 @media (max-width: 800px) {
   .task-theme {
-    width: 250px;
-    margin-right: 12px;
+    width: 350px;
+    // margin-right: 12px;
   }
   .task-inner {
-    width: 250px;
+    width: 350px;
   }
 }
+
+// @media (max-width: 660px) {
+//   .task-theme {
+//     width: 335px;
+//     margin-right: 0;
+//   }
+//   .task-inner {
+//     width: 335px;
+//   }
+// }

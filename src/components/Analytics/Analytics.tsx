@@ -14,13 +14,18 @@ import Task from "../Task/Task";
 import { useState } from "react";
 import { setNav } from "../Redux/menuSlice";
 import OpenMenu from "../Menu/OpenMenu";
+import { Visit } from "../grapAndCharts/websiteVisits/Visit";
+import CurrentVisits from "../grapAndCharts/currentVisits/currentVisits";
+import Subject from "../grapAndCharts/subject/subject";
+import { setLanguageEng, setLanguageRus } from "../Redux/languageSlice";
+import Rates from "../grapAndCharts/rates/Rates";
 
 const Analytics = () => {
   const dispatch = useDispatch();
   const [state, setstate] = useState(true);
 
   const theme = useAppSelector((state) => state.theme.theme);
-
+  const language = useAppSelector((state) => state.language.language);
   return (
     <div className="analytics">
       <div className="analytics-nav">
@@ -43,11 +48,22 @@ const Analytics = () => {
             alt="logo"
           />
 
-          <img
-            className="analytics-nav_items"
-            src={require(`../../assets/nav/#.png`)}
-            alt=""
-          />
+          {language ? (
+            <img
+              className="analytics-nav_items analytics-nav_items-1"
+              src={require(`../../assets/nav/#.png`)}
+              alt=""
+              onClick={() => dispatch(setLanguageEng())}
+            />
+          ) : (
+            <img
+              className="analytics-nav_items analytics-nav_items-2"
+              src={require(`../../assets/nav/#-3.png`)}
+              alt=""
+              style={{ marginLeft: "10px", width: "28px", height: "20px" }}
+              onClick={() => dispatch(setLanguageRus())}
+            />
+          )}
           <img
             className="analytics-nav_items"
             src={require("../../assets/nav/#-1.png")}
@@ -73,9 +89,23 @@ const Analytics = () => {
           lineHeight: "36px",
         }}
       >
-        Hi, Welcome back
+        {language ? "Hi, Welcome Back" : "Привет, с возвращением"}
       </h1>
       <AnalyticsHeader />
+      <div
+        className="news-timeLine"
+        style={{ display: "flex", gap: "24px", marginTop: "24px" }}
+      >
+        <Visit />
+        <CurrentVisits />
+      </div>
+      <div
+        className="news-timeLine"
+        style={{ display: "flex", gap: "24px", marginTop: "24px" }}
+      >
+        <Rates />
+        <Subject />
+      </div>
       <div
         className="news-timeLine"
         style={{ display: "flex", gap: "24px", marginTop: "24px" }}
