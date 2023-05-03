@@ -1,4 +1,3 @@
-import React from "react";
 import "./timeLine.modul.scss";
 import { useAppSelector } from "../../Redux/store";
 
