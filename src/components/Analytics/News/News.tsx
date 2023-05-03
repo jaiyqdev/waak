@@ -47,7 +47,7 @@ const itemsRus = [
     img: "NewsImg-2.png",
     title:
       "Мероприятие с ограниченным бюджетом: 7 советов из Великой депрессии",
-    text: "бландит и другие, волутпат молестие, порта ут, лигула. Aliquam eu nunc...",
+    text: "Бландит и другие, волутпат молестие, порта ут, лигула. Aliquam eu nunc...",
     date: "03 мая 2020",
   },
   {
@@ -65,7 +65,7 @@ const itemsRus = [
   {
     img: "NewsImg-5.png",
     title: " 7 причин, почему они не работают, и что вы можете с этим поделать",
-    text: "blandit et, volutpat molestie, porta ut, ligula. Aliquam eu nunc...",
+    text: "Бландит и другие, волутпат молестие, ворота ут, лигула. Aliquam eu nunc...",
     date: "03 июня 2020",
   },
 ];
