@@ -98,9 +98,6 @@ const Task = () => {
                   lineHeight: "22px",
                   marginLeft: "11px",
                   marginRight: 0,
-
-                  textDecorationLine: !e.checked ? "none" : "line-through",
-                  color: !e.checked ? "#212B36" : "#919EAB",
                 }}
               >
                 <h4
@@ -110,7 +107,7 @@ const Task = () => {
                     lineHeight: "22px",
                     marginLeft: "11px",
                     textDecorationLine: !e.checked ? "none" : "line-through",
-                    color: theme ? "#212B36" : "#919EAB",
+                    color: e.checked ? "#919EAB" : theme ? "black" : "white",
                   }}
                 >
                   {language ? e.textEng : e.textRus}
