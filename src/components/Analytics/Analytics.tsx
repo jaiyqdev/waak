@@ -1,4 +1,3 @@
-import React from "react";
 import AnalyticsHeader from "./AnalyticsHeader/AnalyticsHeader";
 import News from "./News/News";
 import TimeLine from "./TimeLine/TimeLine";
@@ -41,12 +40,6 @@ const Analytics = () => {
             alt=""
             onClick={() => dispatch(setTheme())}
           ></img>
-          <img
-            onClick={() => dispatch(setNav())}
-            className="analytics-nav-img"
-            src={require("../../assets/img/Logo.png")}
-            alt="logo"
-          />
 
           {language ? (
             <img
@@ -64,6 +57,12 @@ const Analytics = () => {
               onClick={() => dispatch(setLanguageRus())}
             />
           )}
+          <img
+            onClick={() => dispatch(setNav())}
+            className="analytics-nav-img"
+            src={require("../../assets/img/Logo.png")}
+            alt="logo"
+          />
           <img
             className="analytics-nav_items"
             src={require("../../assets/nav/#-1.png")}

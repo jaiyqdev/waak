@@ -64,7 +64,7 @@
   }
   .analytics-nav-img {
     display: initial;
-    margin-left: 10px;
+    margin-left: 5px;
   }
   .analytics-nav_items-1,
   .analytics-nav_items-2 {
@@ -75,7 +75,6 @@
 @media (max-width: 560px) {
   .analytics-nav {
     margin-right: 0;
-    // flex-wrap: wrap;
     justify-content: space-around;
 
     .nav-item {

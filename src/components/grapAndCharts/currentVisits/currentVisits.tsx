@@ -1,4 +1,3 @@
-import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { useAppSelector } from "../../Redux/store";
@@ -31,7 +30,14 @@ const CurrentVisits = () => {
       }}
     >
       <h2
-        style={{ textAlign: "start", flexBasis: "flex-start", padding: "24px" }}
+        style={{
+          textAlign: "start",
+          flexBasis: "flex-start",
+          padding: "24px",
+          fontWeight: "700",
+          fontSize: "18px",
+          lineHeight: " 28px",
+        }}
       >
         {language ? "Current Visits" : "Текущие визиты"}
       </h2>

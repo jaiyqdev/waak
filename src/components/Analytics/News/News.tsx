@@ -1,4 +1,3 @@
-import React from "react";
 import "./news.modul.scss";
 import { useAppSelector } from "../../Redux/store";
 

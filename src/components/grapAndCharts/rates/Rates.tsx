@@ -9,7 +9,6 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import "./rates.modul.scss";
-import { faker } from "@faker-js/faker";
 import { useAppSelector } from "../../Redux/store";
 
 ChartJS.register(

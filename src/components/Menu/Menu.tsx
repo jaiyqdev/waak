@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./menu.modul.scss";
 import { useAppSelector } from "../Redux/store";
 

@@ -1,4 +1,3 @@
-import React from "react";
 import "./traffic.modul.scss";
 import { useAppSelector } from "../Redux/store";
 
@@ -51,7 +50,7 @@ const Traffic = () => {
               border: "1px solid rgba(145, 158, 171, 0.24)",
             }}
           >
-            <img src={require(`../../assets/img/${e.img}`)} />
+            <img src={require(`../../assets/img/${e.img}`)} alt="" />
             <h2
               style={{
                 fontWeight: "700",

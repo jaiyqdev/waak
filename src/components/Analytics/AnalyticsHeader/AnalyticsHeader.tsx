@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppSelector } from "../../Redux/store";
 
 const items = [
@@ -98,7 +97,6 @@ const AnalyticsHeader = () => {
           style={{
             minWidth: "252px",
             minHeight: "252px",
-            // padding: "10px",
             backgroundColor: `${e.bgcolor}`,
             color: `${e.color}`,
             borderRadius: "16px",

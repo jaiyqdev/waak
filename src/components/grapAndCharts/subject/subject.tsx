@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Chart as ChartJS,
   RadialLinearScale,
@@ -53,7 +52,14 @@ const Subject = () => {
       }}
     >
       <h2
-        style={{ textAlign: "start", flexBasis: "flex-start", padding: "24px" }}
+        style={{
+          textAlign: "start",
+          flexBasis: "flex-start",
+          padding: "24px",
+          fontWeight: "700",
+          fontSize: "18px",
+          lineHeight: " 28px",
+        }}
       >
         {language ? "Current Subject" : "Текущая тема"}
       </h2>

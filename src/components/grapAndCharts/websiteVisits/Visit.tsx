@@ -11,16 +11,11 @@ import {
   BarController,
   BarElement,
   Filler,
-  ChartOptions,
 } from "chart.js";
 import "./visit.modul.scss";
 
 import { faker } from "@faker-js/faker";
 import { useAppSelector } from "../../Redux/store";
-
-interface LineProps {
-  options: ChartOptions<"line">;
-}
 
 ChartJS.register(
   CategoryScale,
