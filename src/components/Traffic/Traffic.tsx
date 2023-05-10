@@ -1,5 +1,5 @@
-import React from "react";
 import "./traffic.modul.scss";
+import { useAppSelector } from "../Redux/store";
 
 const items = [
   { img: "facebook.png", number: "8,20k", text: "FaceBook" },
@@ -9,6 +9,7 @@ const items = [
 ];
 
 const Traffic = () => {
+  const language = useAppSelector((state) => state.language.language);
   return (
     <div className="traffic-theme">
       <h2
@@ -21,7 +22,7 @@ const Traffic = () => {
           lineHeight: "28px",
         }}
       >
-        Traffic bt Site
+        {language ? "Traffic by Site" : "Трафик по сайтам"}
       </h2>
 
       <div
@@ -49,7 +50,7 @@ const Traffic = () => {
               border: "1px solid rgba(145, 158, 171, 0.24)",
             }}
           >
-            <img src={require(`../../assets/img/${e.img}`)} />
+            <img src={require(`../../assets/img/${e.img}`)} alt="" />
             <h2
               style={{
                 fontWeight: "700",

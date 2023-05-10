@@ -1,12 +1,14 @@
 import { configureStore } from "@reduxjs/toolkit";
 import themeSlice from "./themeSlice";
 import menuSlice from "./menuSlice";
+import languageSlice from "./languageSlice";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 
 const store = configureStore({
   reducer: {
     theme: themeSlice,
     menu: menuSlice,
+    language: languageSlice,
   },
 });
 declare global {

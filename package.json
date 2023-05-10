@@ -13,8 +13,12 @@
     "@types/react": "^18.0.38",
     "@types/react-dom": "^18.0.11",
     "@types/react-redux": "^7.1.25",
+    "chart.js": "^3.9.1",
+    "faker": "^6.6.6",
     "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
     "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.2",
     "react-redux": "^8.0.5",
     "react-scripts": "5.0.1",
     "sass": "^1.62.0",
@@ -44,5 +48,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "@types/faker": "^6.6.9"
   }
 }

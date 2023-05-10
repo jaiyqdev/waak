@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./openMenu.modul.scss";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../Redux/store";
@@ -27,13 +26,18 @@ const apps = [
 ];
 
 const OpenMenu = () => {
-  const [state, setstate] = useState(false);
   const nav = useAppSelector((state) => state.menu.nav);
   const dispatch = useDispatch();
+  const theme = useAppSelector((state) => state.theme.theme);
   return (
-    <div className={nav ? "open-menu" : "close-menu"}>
+    <div
+      className={nav ? "open-menu" : "close-menu"}
+      style={
+        theme ? { backgroundColor: "white" } : { backgroundColor: "#161c24" }
+      }
+    >
       <img
-        className={state ? "img-pad" : "img-adap"}
+        className={"img-pad"}
         onClick={() => dispatch(setNav())}
         style={{ width: "40px" }}
         src={require("../../assets/img/Logo.png")}

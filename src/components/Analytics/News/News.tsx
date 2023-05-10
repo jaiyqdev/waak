@@ -1,5 +1,5 @@
-import React from "react";
 import "./news.modul.scss";
+import { useAppSelector } from "../../Redux/store";
 
 const items = [
   {
@@ -35,7 +35,43 @@ const items = [
   },
 ];
 
+const itemsRus = [
+  {
+    img: "NewsImg-1.png",
+    title:
+      "Овладейте искусством проведения мероприятий с помощью этих 7 советов",
+    text: "Бландит и многое другое, волутпат молестие, порта ут, лигула. Aliquam eu nunc...",
+    date: "19 мая 2021",
+  },
+  {
+    img: "NewsImg-2.png",
+    title:
+      "Мероприятие с ограниченным бюджетом: 7 советов из Великой депрессии",
+    text: "Бландит и другие, волутпат молестие, порта ут, лигула. Aliquam eu nunc...",
+    date: "03 мая 2020",
+  },
+  {
+    img: "NewsImg-3.png",
+    title: "7 лучших моментов о событии",
+    text: "Бландит и другие, волютпат молестие, порта ут, лигула. Aliquam eu nunc...",
+    date: "19 февраля 2019",
+  },
+  {
+    img: "NewsImg-4.png",
+    title: "Apply These 7 Secret Techniques To Improve Event",
+    text: "Бландит и другие, волутпат молестие, ворота ут, лигула. Aliquam eu nunc...",
+    date: "15 декабря 2020",
+  },
+  {
+    img: "NewsImg-5.png",
+    title: " 7 причин, почему они не работают, и что вы можете с этим поделать",
+    text: "Бландит и другие, волутпат молестие, ворота ут, лигула. Aliquam eu nunc...",
+    date: "03 июня 2020",
+  },
+];
+
 const News = () => {
+  const language = useAppSelector((state) => state.language.language);
   return (
     <div
       className="news-theme"
@@ -54,7 +90,7 @@ const News = () => {
           marginLeft: "24px",
         }}
       >
-        News & Update
+        {language ? "News & Update" : "Новости и обновления"}
       </h2>
       <div
         style={{
@@ -64,7 +100,7 @@ const News = () => {
           margin: "24px",
         }}
       >
-        {items.map((e) => (
+        {(language ? items : itemsRus).map((e) => (
           <div
             className="test"
             key={e.title}
@@ -105,7 +141,7 @@ const News = () => {
           justifyContent: "end",
         }}
       >
-        View All
+        {language ? "View All" : "Просмотреть все"}
       </h4>
     </div>
   );
